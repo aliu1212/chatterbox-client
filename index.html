@@ -27,12 +27,16 @@
       <div class="spinner"><img src="client/images/spiffygif_46x46.gif"></div>
       <div id="rooms">
         Room:
-        <select></select>
+        <select>
+          <option value ="">Choose Number</option>
+          <option value ="Heck">Choose Heck</option>
+        </select>
         <button>Add Room</button>
       </div>
       <form action="#" id="send" method="post">
         <input type="text" name="message" id="message"/>
         <input type="submit" name="submit" class="submit"/>
+        <!-- <button type="submit" name="submit" class="submit" onClick='FormView.handleSubmit()'/> -->
       </form>
     </div>
     <div id="chats"></div>
@@ -48,6 +52,7 @@
     <script src="client/scripts/app.js"></script>
     <script>
       $(() => App.initialize());
+  
     </script>
   </body>
 </html>

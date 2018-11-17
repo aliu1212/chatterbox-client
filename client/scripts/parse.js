@@ -6,7 +6,7 @@ var Parse = {
     // todo: save a message to the server
     $.ajax({
       url: Parse.server, 
-      type: "POST",
+      type: 'POST',
       contentType: 'application/json',
       data: JSON.stringify(message),
       success: successCB,
