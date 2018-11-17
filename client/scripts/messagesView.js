@@ -12,14 +12,16 @@ var MessagesView = {
   },
 
   renderMessage: function(message) {
-    if (!Rooms[message.rooms]) {
-      Rooms.rooms.push(message.rooms);
-    }
-    if (!Messages[message.username]) {
+    // if (!Rooms[message.rooms]) {
+    //   Rooms.rooms.push(message.rooms);
+    // }
+    // Check if username exist inside message object
+    if (!Messages[message['username']]) {
       Messages[message.username] = [];
     }
+    
     Messages[message.username].push(message);
-    MessagesView.$chats.append(`<div>
+    MessagesView.$chats.prepend(`<div>
                                     <p class='username' onClick=${Friends.toggleStatus()}>${message.username}</p>
                                     <p class='text'> ${message.text}</p>
                                 </div>`);

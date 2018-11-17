@@ -1,6 +1,6 @@
 var Rooms = {
   rooms: [],
-  add: function() {
-
+  add: function(roomName) {
+    //rooms.push(roomName);
   }
 };
