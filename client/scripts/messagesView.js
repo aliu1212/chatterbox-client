@@ -9,22 +9,19 @@ var MessagesView = {
       console.log('messages:', message);
       Parse.create(message, function() { console.log('Message sent.'); }, null);
     });
-    // $('#send button').on( 'click', function() {
-    //   var message = $('#send #message').val();
-    //   console.log('messages:', message);
-    //   Parse.create(message, function() { console.log('Message sent.'); }, null);
-    // });
   },
 
   renderMessage: function(message) {
-
+    if (!Rooms[message.rooms]) {
+      Rooms.rooms.push(message.rooms);
+    }
+    if (!Messages[message.username]) {
+      Messages[message.username] = [];
+    }
+    Messages[message.username].push(message);
     MessagesView.$chats.append(`<div>
                                     <p class='username' onClick=${Friends.toggleStatus()}>${message.username}</p>
                                     <p class='text'> ${message.text}</p>
                                 </div>`);
   }
-
-  // $( ".username" ).on( "click", function() {
-  //   Friends.toggleStatus();
-  // })
 };

@@ -11,8 +11,6 @@ var RoomsView = {
 
   renderRoom: function(value) {
     RoomsView.$select.prepend(`<option value ="${value}">${value}</option>`);
-    
-    // RoomsView.$select.prepend('<option value = ' + value + '>' + value + '</option>');
 
   },
 
