@@ -11,8 +11,15 @@ var FormView = {
     event.preventDefault();
     var message = $('#message').val()
     var user = App.username;
-    var messageObj = {text: message, username: user};
-    MessagesView.renderMessage(messageObj);
+    var messageObj = {
+      text: message,
+      roomName: App.room,
+      username: user
+    };
+
+
+    Parse.create(messageObj, Parse.readAll(() => {console.log('message sent')}));
+    // MessagesView.renderMessage(messageObj);
     $('#message').val('');
   },
 

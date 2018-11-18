@@ -19,11 +19,12 @@ var MessagesView = {
     if (!Messages[message['username']]) {
       Messages[message.username] = [];
     }
-    
+
     Messages[message.username].push(message);
-    MessagesView.$chats.prepend(`<div>
-                                    <p class='username' onClick=${Friends.toggleStatus()}>${message.username}</p>
-                                    <p class='text'> ${message.text}</p>
+    MessagesView.$chats.prepend(`<div class = messageBox>
+                                    <p class='username' onClick=${Friends.toggleStatus()}>${_.escape(message.username)}</p>
+                                    <p class='text'> ${_.escape(message.text)}</p>
+                                    <p class='time'> ${_.escape(message.createdAt)}</p>
                                 </div>`);
   }
 };

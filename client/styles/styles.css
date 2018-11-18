@@ -14,6 +14,7 @@ body {
     padding: 50px 60px;
     border: solid #ddd;
     border-width: 0 1px 1px 1px;
+    background-image: url('https://motionarray.imgix.net/preview-75279-EZM97NFURC_0005.jpg?w=750&q=60&fit=max&auto=format');
 }
 
 #main h1 {
@@ -89,3 +90,22 @@ form input[type=text] {
     background-color: #0090da;
 }
 
+.messageBox {
+    /* background-color: ghostwhite; */
+    font-family: fantasy;
+    /* color: black; */
+    font-weight: bold;
+    font-size: 1.5em;
+    background-color: #ffffff;
+    border: 3px solid black;
+    opacity: 0.6;
+    margin: 1em;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.username .text {
+    color: black;
+    opacity: 1;
+    font-size: 1em;
+}
